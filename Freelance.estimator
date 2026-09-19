@@ -1,0 +1,145 @@
+using System;
+using System.Numerics;
+public enum ProjectType
+{
+    Small,
+    Medium,
+    Large,
+}
+
+class program
+{
+    static void Main(string[] args)
+    {
+      const decimal LABOR_RATE = 75.00m;
+      const decimal TAX_RATE = 0.07m;
+    }
+}
+
+class inputsystem 
+{
+    static void Main()
+    {
+        Console.WriteLine("Enter client name: ");
+        string clientName = Console.ReadLine();
+
+        Console.WriteLine("Enter estimated labor hours: ");
+        decimal laborHours = Convert.ToDouble(Console.ReadLine());
+
+        Console.WriteLine("Enter material cost: ");
+        decimal materialCost = Convert.ToDecimal(Console.ReadLine());
+
+        Console.WriteLine("Enter project type (Small, Medium, Large): ");
+        string projectTypeInput = Console.ReadLine();
+
+        Console.WriteLine($"Client: {clientName}");
+        Console.WriteLine($"Labor Hours: {laborHours}");
+        Console.WriteLine($"Material Cost: {materialCost}");
+        Console.WriteLine($"Project Type: {projectTypeInput}");
+    } 
+}
+
+class multiplier
+{
+    static void Main()
+    {
+   string projectType = "Medium";
+        
+        // Use a switch expression to get the multiplier
+        double multiplier = projectType.ToLower() switch
+        {
+            "small"  => 1.0,
+            "medium" => 1.15,
+            "large"  => 1.30,
+            _        => throw new ArgumentException($"Unknown project type: {projectType}")
+        };
+
+        Console.WriteLine($"The multiplier for a {projectType} project is {multiplier}"); 
+
+
+
+    double LABOR_RATE = 75.00;
+    double hours = 9;
+    double materials = 300.50;
+
+    double duration = hours / 8.0;
+
+    double LaborCost = hours * LABOR_RATE;
+
+    double Subtotal = (LaborCost + materials) * small;
+    Console.WriteLine($"Subtotal: {Subtotal:C}");
+
+    double tax = Subtotal * TAX_RATE;
+    Console.WriteLine($"Tax: {tax:C}");
+
+    double TotalCost = Subtotal + tax;
+    Console.WriteLine($"Total Cost: {TotalCost:C}");
+
+    decimal Small = Math.Round(1.0m);
+    decimal Medium = Math.Round(1.15m);
+    decimal Large = Math.Round(1.30m);
+
+    double result1 = Math.Ceiling(Small);
+    double result2 = Math.Ceiling(Medium);
+    double result3 = Math.Ceiling(Large);
+    }
+}
+
+class randomProjectNumber
+{
+    static void Main()
+    {
+        Random random = new Random();
+
+        int projectNumber = random.Next(1000, 9999);
+        Console.WriteLine($"Generate Project Number: " + projectNumber);
+    }
+}
+
+class outputsystem
+{
+    static void Main()
+    {
+      Console.Write("Do you have a discount percentage? (Press Enter if none): ");
+string input = Console.ReadLine();
+
+// Use a nullable double to store the percentage
+double? discountPercentage = null;
+
+if (!string.IsNullOrWhiteSpace(input) && double.TryParse(input, out double parsedValue))
+{
+    discountPercentage = parsedValue;
+}
+
+// Example usage
+if (discountPercentage.HasValue)
+{
+    Console.WriteLine($"Applied discount: {discountPercentage.Value}%");
+}
+else
+{
+    Console.WriteLine("No discount applied.");
+}Console.Write("Do you have a discount percentage? (Press Enter if none): ");
+string input = Console.ReadLine();
+
+// Use a nullable double to store the percentage
+double? discountPercentage = null;
+
+if (!string.IsNullOrWhiteSpace(input) && double.TryParse(input, out double parsedValue))
+{
+    discountPercentage = parsedValue;
+}
+
+// Example usage
+if (discountPercentage.HasValue)
+{
+    Console.WriteLine($"Applied discount: {discountPercentage.Value}%");
+}
+else
+{
+    Console.WriteLine("No discount applied.");
+}
+
+    }
+}
+   
